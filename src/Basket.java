@@ -58,13 +58,28 @@ public class Basket implements Serializable {
 
     public void saveTxt(File textFile) throws FileNotFoundException {
         try (PrintWriter out = new PrintWriter(textFile)) {
-            out.println(String.join(" ", goods));
-            out.println(String.join(" ", Arrays.stream(prices)
-                    .mapToObj(String::valueOf)
-                    .toArray(String[]::new)));
-            out.println(String.join(" ", Arrays.stream(quantities)
-                    .mapToObj(String::valueOf)
-                    .toArray(String[]::new)));
+            //out.println(String.join(" ", goods));
+            //out.println(String.join(" ", Arrays.stream(prices)
+           //         .mapToObj(String::valueOf)
+            //        .toArray(String[]::new)));
+            //out.println(String.join(" ", Arrays.stream(quantities)
+            //        .mapToObj(String::valueOf)
+            //        .toArray(String[]::new)));
+
+            for (String good : goods){
+                out.println(good + " ");
+            }
+            out.println();
+
+            for (int price : prices){
+                out.println(price + " ");
+            }
+            out.println();
+
+            for (int quantity : quantities){
+                out.println(quantity + " ");
+            }
+            out.println();
         }
 
     }
