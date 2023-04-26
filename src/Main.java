@@ -5,8 +5,8 @@
 
         public class Main {
             static Scanner scanner = new Scanner(System.in);
-            static String[] products = {"Хлеб", "Яблоки", "Молоко", "Сметана", "Хлопья"};
-            static int[] price = {20, 45, 67, 120, 200};
+            static String[] products = {"Хлеб", "Яблоки", "Молоко"};
+            static int[] price = {20, 45, 67};
             static File saveFile = new File("basket.txt");
             public static void main(String[] args) throws FileNotFoundException {
                 Basket basket = null;
