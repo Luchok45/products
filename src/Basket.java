@@ -60,17 +60,17 @@ public class Basket implements Serializable {
         try (PrintWriter out = new PrintWriter(textFile)) {
 
             for (String good : goods){
-                out.println(good + " ");
+                out.print(good + " ");
             }
             out.println();
 
             for (int price : prices){
-                out.println(price + " ");
+                out.print(price + " ");
             }
             out.println();
 
             for (int quantity : quantities){
-                out.println(quantity + " ");
+                out.print(quantity + " ");
             }
             out.println();
         }

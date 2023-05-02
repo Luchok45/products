@@ -11,6 +11,7 @@
             public static void main(String[] args) throws FileNotFoundException {
                 Basket basket = null;
                 if(saveFile.exists()){
+                    basket = Basket.loadFromTxtFile(saveFile);
                 } else {
                     basket = new Basket(products, price);
                 }
